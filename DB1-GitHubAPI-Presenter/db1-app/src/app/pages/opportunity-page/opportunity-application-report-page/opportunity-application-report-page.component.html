@@ -1,0 +1,45 @@
+<div class="example-container">
+  <form>
+    <button mat-button class="btn-detail white-icon" (click)="cancel()">
+      <mat-icon>cancel</mat-icon>Fechar</button>
+    <br/>
+    <mat-form-field>
+      <input matInput placeholder="Vaga" [formControl]="opportunity">
+    </mat-form-field>
+    <br/>
+    <hr/>
+    <h6>Candidatos ordenados por qualificação</h6>
+    <table mat-table #table [dataSource]="dataSource">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class="mat-cell-header-id"> No. </th>
+        <td mat-cell *matCellDef="let element" class="mat-cell-id"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- UserName Column -->
+      <ng-container matColumnDef="userName">
+        <th mat-header-cell *matHeaderCellDef class="mat-cell-header-username"> Usuário </th>
+        <td mat-cell *matCellDef="let element" class="mat-cell-username"> {{element.userName}} </td>
+      </ng-container>
+
+      <!-- UserMail Column -->
+      <ng-container matColumnDef="userMail">
+        <th mat-header-cell *matHeaderCellDef class="mat-cell-header-usermail"> Email </th>
+        <td mat-cell *matCellDef="let element" class="mat-cell-usermail"> {{element.userMail}} </td>
+      </ng-container>
+
+      <!-- UserMail Column -->
+      <ng-container matColumnDef="totalPoints">
+        <th mat-header-cell *matHeaderCellDef class="mat-cell-header-total"> Pontos </th>
+        <td mat-cell *matCellDef="let element" class="mat-cell-total"> {{element.totalPoints}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectedRow=row" [style.background]="(selectedRow != undefined&&selectedRow===row)? '#f44336' : ''"></tr>
+    </table>
+
+    <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+    </mat-paginator>
+  </form>
+</div>

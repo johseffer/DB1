@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="7.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DB1.WebAPICore.Data\DB1.WebAPICore.Data.csproj" />
+    <ProjectReference Include="..\DB1.WebAPICore.Domain\DB1.WebAPICore.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

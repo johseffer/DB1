@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[DB1_Technology]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	[Name] VARCHAR(100) NOT NULL,
+	CONSTRAINT UN_DB1_Technology UNIQUE (Name),
+)

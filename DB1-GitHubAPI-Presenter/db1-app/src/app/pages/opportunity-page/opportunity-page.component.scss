@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Poppins);
+$sourceSansPro : 'Source Sans Pro';
+$poppings : 'Poppins';
+
+.mat-header-row, .mat-row {
+  height: 40px;
+  }
+
+  .mat-cell-header-id{
+    width: 10%;
+  }
+  .mat-cell-header-name{
+    width: 20%;
+  }
+  .mat-cell-header-description{
+    width: 70%;
+  }
+
+.mat-table{
+  width:100%;
+}
+
+.example-container{
+  margin-bottom:50px;
+  // width: 40%;
+}
+
+.btn-detail{
+  float:right;
+  background-color: #f44336;
+  border-color: #b31e14;
+  border-style: solid;
+  border-width: 2px;
+  margin-left: 2px;
+  color:white;
+  font-family: $poppings;
+}
+
+.white-icon {
+  color: white;
+  margin-right: 2px;
+}

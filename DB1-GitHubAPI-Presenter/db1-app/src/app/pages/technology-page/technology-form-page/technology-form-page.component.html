@@ -1,0 +1,13 @@
+<div class="example-container">
+  <form>
+    <button mat-button class="btn-detail white-icon" (click)="cancel()">
+      <mat-icon>cancel</mat-icon>Cancelar</button>
+    <button mat-button class="btn-detail white-icon" (click)="save()">
+      <mat-icon>save</mat-icon>Salvar</button>
+    <br/>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [formControl]="name" required>
+      <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </form>
+</div>

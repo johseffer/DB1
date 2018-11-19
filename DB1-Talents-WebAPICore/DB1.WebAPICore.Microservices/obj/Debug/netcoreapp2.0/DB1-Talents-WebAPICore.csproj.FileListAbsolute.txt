@@ -1,0 +1,11 @@
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\bin\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.deps.json
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\bin\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.runtimeconfig.json
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\bin\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.runtimeconfig.dev.json
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\bin\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.dll
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\bin\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.pdb
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\obj\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.csprojResolveAssemblyReference.cache
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\obj\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.csproj.CoreCompileInputs.cache
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\obj\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.AssemblyInfoInputs.cache
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\obj\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.AssemblyInfo.cs
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\obj\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.dll
+c:\users\johseffer\source\repos\DB1-Talents-WebAPICore\DB1-Talents-WebAPICore\obj\Debug\netcoreapp2.0\DB1-Talents-WebAPICore.pdb

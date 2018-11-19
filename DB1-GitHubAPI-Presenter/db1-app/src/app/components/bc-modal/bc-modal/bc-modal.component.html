@@ -1,0 +1,29 @@
+<div bsModal 
+     #childModal="bs-modal" 
+     class="modal fade" 
+     tabindex="-1" 
+     role="dialog" 
+     aria-labelledby="modal" 
+     aria-hidden="true"
+     (onHide)="dismiss">
+
+    <div class="modal-dialog modal-{{size}}">
+        <div class="modal-content">
+            <div class="modal-header modal-header-primary" *ngIf="title || closeable">
+                <h4 class="modal-title pull-left" *ngIf="title">{{title}}</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="close()" *ngIf="closeable">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ng-content select=".modal-body-content"> </ng-content>
+            </div>
+
+            <div class="modal-footer">
+                <div class="pull-left">
+                    <ng-content select=".modal-footer-content"></ng-content> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

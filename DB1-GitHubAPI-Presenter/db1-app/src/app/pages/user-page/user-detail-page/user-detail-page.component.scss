@@ -1,0 +1,45 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+// Font Variables
+$lato: 'Lato'; 
+
+.field-label{
+  font-weight: bolder;
+  margin-left: 30px;
+}
+
+.mat-header-row, .mat-row {
+  height: 30px;
+  }
+
+.user-details{
+  margin-top: 10px;
+}
+
+.mat-cell-header-id{
+  width: 20%;
+}
+.mat-cell-header-name{
+  width: 40%;
+}
+
+.mat-cell-header-url{
+  width: 40%;
+}
+
+span{
+  font-family: $lato;
+}
+
+.btn-back{
+  float: right !important;
+}
+
+h4{
+  margin-left:20px;  
+  margin-bottom: 0px;
+}
+
+hr{
+  margin-bottom: 20px;
+}

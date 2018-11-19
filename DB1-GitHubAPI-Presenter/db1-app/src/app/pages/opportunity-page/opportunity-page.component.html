@@ -1,0 +1,46 @@
+<app-page-content>
+  <div class="example-container mat-elevation-z8">
+    <button mat-button class="btn-detail" (click)="deleteOpportunity()">
+      <mat-icon class="white-icon">delete</mat-icon>Excluir</button>
+    <button mat-button class="btn-detail" (click)="refresh()">
+      <mat-icon class="white-icon">refresh</mat-icon>Atualizar</button>
+    <button mat-button class="btn-detail" (click)="addOpportunity()">
+      <mat-icon class="white-icon">add</mat-icon>Novo</button>
+    <button mat-button *ngIf="selectedRow != undefined" class="btn-detail" (click)="addOpportunityApplication()">
+      <mat-icon class="white-icon">person_add</mat-icon>Novo Candidato</button>
+    <button mat-button *ngIf="selectedRow != undefined" class="btn-detail" (click)="editOpportunity()">
+      <mat-icon class="white-icon">edit</mat-icon>Editar</button>
+    <button mat-button *ngIf="selectedRow != undefined" class="btn-detail" (click)="openOpportunityDetails()">
+      <mat-icon class="white-icon">pageview</mat-icon>Detalhes</button>
+    <button mat-button *ngIf="selectedRow != undefined" class="btn-detail" (click)="openOpportunityApplications()">
+      <mat-icon class="white-icon">group</mat-icon>Candidaturas</button>
+
+    <table mat-table #table [dataSource]="dataSource">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class="mat-cell-header-id"> No. </th>
+        <td mat-cell *matCellDef="let element" class="mat-cell-id"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef class="mat-cell-header-name"> Nome </th>
+        <td mat-cell *matCellDef="let element" class="mat-cell-name"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- Description Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef class="mat-cell-header-description"> Descrição </th>
+        <td mat-cell *matCellDef="let element" class="mat-cell-description"> {{element.description}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectedRow=row" [style.background]="(selectedRow != undefined&&selectedRow===row)? '#f44336' : ''"></tr>
+    </table>
+
+    <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+    </mat-paginator>
+  </div>
+
+</app-page-content>

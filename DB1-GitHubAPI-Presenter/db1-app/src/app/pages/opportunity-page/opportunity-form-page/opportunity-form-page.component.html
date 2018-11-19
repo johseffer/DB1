@@ -1,0 +1,34 @@
+<div class="example-container">
+  <form>
+    <button mat-button class="btn-detail white-icon" (click)="cancel()">
+      <mat-icon>cancel</mat-icon>Cancelar</button>
+    <button mat-button class="btn-detail white-icon" (click)="save()">
+      <mat-icon>save</mat-icon>Salvar</button>
+    <br/>
+    <mat-form-field>
+      <input matInput placeholder="Título" [formControl]="name" required>
+      <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="description-form-field">
+      <textarea class="description-textarea" matInput placeholder="Descrição" [formControl]="description" required></textarea>
+      <mat-error *ngIf="description.invalid">{{getErrorMessageDescription()}}</mat-error>
+    </mat-form-field>
+    <br/>
+    <hr/>
+    <h6>Requisitos</h6>
+    <form [formGroup]="technologiesFormGroup" (ngSubmit)="submit()">
+      <div *ngFor="let tech of technologies; let i = index">
+        <mat-checkbox *ngIf="!isDetail" class="example-margin" (change)="onChange($event)" [checked]="tech.checked" [value]="tech.id">{{tech.name}}</mat-checkbox>
+        <span *ngIf="isDetail" class="example-margin" style="font-weight: bold;">{{tech.name}}</span>
+        <mat-form-field *ngIf="tech.checked" class="points-input">
+          <input type="number" *ngIf="!isDetail && tech.checked" (change)="onChangePoints($event, tech.id)" matInput placeholder="Pontos"
+            [value]="tech.points">
+          <input type="number" *ngIf="isDetail" (change)="onChangePoints($event, tech.id)" matInput placeholder="Pontos" [value]="tech.points"
+            readonly>
+          <!-- <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error> -->
+        </mat-form-field>
+      </div>
+    </form>
+  </form>
+</div>

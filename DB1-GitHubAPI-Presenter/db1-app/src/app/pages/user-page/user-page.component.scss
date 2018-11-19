@@ -1,0 +1,24 @@
+
+.mat-header-row, .mat-row {
+  height: 40px;
+  }
+
+  .mat-cell-header-id{
+    width: 10%;
+  }
+  .mat-cell-header-name{
+    width: 90%;
+  }
+
+.mat-table{
+  width:100%;
+}
+
+.example-container{
+  margin-bottom:50px;
+  // width: 40%;
+}
+
+.btn-detail{
+  float:right;
+}
